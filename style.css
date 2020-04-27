@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+li,
+button,
+label,
+input,
+p {
+    font-size: 2rem;;
+}
+
+h1 {
+    font-size: 2.6rem;
+}
+
+h2 {
+    font-size: 4.8rem;
+}
+h3 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+h4,
+h5 {
+    font-size: 2.8rem;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    padding: 2rem 6rem;
+    background: #4c6e97;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background .5s ease-in-out;
+}
+
+input, textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+}
+
+button:hover {
+    background: #355070;
+}
+button:focus {
+    background: #355070;
+    outline: solid 1px white;
+}
+input:focus, textarea:focus, input[type=email] {
+    box-shadow: 0 0 5px rgba(255,165,0, 1);
+    border: 5px solid rgba(255,165,0, 1);
+}
+
+/* NAV AND HERO */
+.main-head {
+    background: #131c27;
+    color: #fff;
+}
+
+.main-head nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    padding: 2rem;
+    width: 90%;
+    margin: auto;
+}
+
+.main-head nav ul {
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-around;
+    align-items: center;
+}
+#logo {
+    flex: 2 1 40rem;
+    font-family: 'Pattaya', sans-serif;
+    font-weight: 400;
+}
+
+.hero {
+    min-height: 90vh;
+    background: linear-gradient(rgba(0,0,0,.8), transparent), url('img/landing-page.jpg') no-repeat center center/cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h3 {
+    padding: 5rem;
+}
+
+/*  LOCATIONS SECTION */ 
+#location {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.3), transparent), url('img/new-york-page.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.location-head {
+    width: 90%;
+    margin: auto;
+}
+
+.location-head h2{
+    padding: 1rem 0;
+    text-decoration: underline;
+    text-decoration-thickness: .5rem;
+}
+
+.location-head h3 {
+    padding: 4rem 0;
+    background: linear-gradient(#131c27, #663b34);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cloud {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+.moving-cloud-1 {
+    animation: cloudAnim 3s infinite alternate ease-in-out;
+}
+
+.moving-cloud-2 {
+    top: 20%;
+    z-index: -1;
+    opacity: .5;
+    animation: cloudAnim 3.5s infinite alternate ease-in-out;
+}
+
+@keyframes cloudAnim {
+    from {
+        transform: translate(10%, -10%);
+    }
+
+    to {
+        transform: translate(0%,0%);
+    }
+}
+
+
+/* BENEFITS SECTION */
+.benefits-head {
+    background: #343c44;
+    padding: 3rem;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.benefits-head h3 {
+    padding: 1rem;
+}
+
+.cards {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 70vh;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .1), 0 20px 20px rgba(0, 0, 0, .1);
+    flex: 1 1 30rem;
+    margin: 2rem 5rem;
+    min-height: 40vh;
+    text-align: center;
+}
+
+.card-img {
+    background: #27394e;
+}
+
+.cards img {
+    max-width: 15%;
+    margin: 2rem;
+}
+
+.card h4{
+    padding: 3rem;
+}
+.card p {
+    padding: .5rem;
+}
+
+/* CONTACT SECTION  */
+#contact {
+    min-height: 100vh;
+    padding: 5rem;
+    background: linear-gradient(rgba(0,0,0,.5), transparent),url('img/contact-mountain.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-wrapper {
+    background: rgba(19, 28, 39, .8);
+    width: 60%;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.form-head {
+    text-align: center;
+    padding: 4rem;
+}
+
+.name-form,
+.email-form,
+.message-form {
+    padding: 3rem;
+}
+
+.form-wrapper label {
+    display: block;
+}
+
+.form-wrapper button {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 8rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.form-wrapper input,
+.form-wrapper textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+.form-wrapper input, .form-wrapper textarea {
+    padding: 1rem 1rem;
+}
+
+footer {
+    color: #fff;
+    background: rgba(19, 28, 39, 1);
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    min-height: 10vh;
+}
+
+footer h5 {
+    flex: 1 1 40rem;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    flex:  1 1 40rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media(max-width:933px) {
+    nav {
+        text-align: center;
+    }
+
+    #logo {
+        padding: 2rem;
+    }
+
+    .cloud {
+        height: 40rem;
+        pointer-events: none;
+    }
+
+    .moving-cloud-1 {
+        z-index: -1;
+    }
+
+    .moving-cloud-2 {
+        z-index: -2;
+    }
+
+    .location-head h3 {
+        background: rgba(19, 28, 39, .8);
+        padding: 5px;
+        -webkit-text-fill-color: #fff;
+    }
+
+    .footer-wrapper h5 {
+        text-align:center;
+        padding-bottom: 1.5rem;
+    }
+}
+
+@media(max-width:650px) {
+    html {
+        font-size: 45%;
+    }
+
+    .form-wrapper {
+        width: 90%;
+        margin: auto;
+    }
+}
